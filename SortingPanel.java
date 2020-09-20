@@ -458,20 +458,20 @@ public class SortingPanel extends JPanel {
 	}
 	
 	// Function to update visibility of array generation buttons
-		public static void updateArrayButtons() {
-			// If they are visible turn them off
-			if (sorted.isVisible()) {
-				sorted.setVisible(false);
-				shuffle.setVisible(false);
-				reversed.setVisible(false);
-				partially.setVisible(false);
-			}
-			// If not turn them on
-			else {
-				sorted.setVisible(true);
-				shuffle.setVisible(true);
-				reversed.setVisible(true);
-				partially.setVisible(true);
-			}
+	public static void updateArrayButtons() {
+		// If they are visible turn them off
+		if (sorted.isVisible()) {
+			sorted.setVisible(false);
+			shuffle.setVisible(false);
+			reversed.setVisible(false);
+			partially.setVisible(false);
 		}
+		// If not turn them on
+		else {
+			sorted.setVisible(true);
+			shuffle.setVisible(true);
+			reversed.setVisible(true);
+			partially.setVisible(true);
+		}
+	}
 }
