@@ -18,3 +18,5 @@ Generates a random array using a variation of the Fisher - Yates shuffle, in whi
 ### Heapsort
 ### Shell sort 
 The gap sequence used for Shell sort is a_(n+1) = 3*a_n + 1 which guarantees a time compllexity of Θ(Ν^3/2)
+
+For every sort there is a corresponding Worker class that extends SwingWorker. The purpose of the Worker classes is to implement the sorting algorithms and at the same time take care of drawing the visualisation animations.
