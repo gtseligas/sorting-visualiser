@@ -45,27 +45,27 @@ public class SortingPanel extends JPanel {
 	
 	// The red palette
 	private static final Color RED4 = new Color(255,186,186);
-    private static final Color RED3 = new Color(255,123,123);
-    private static final Color RED2 = new Color(255,82,82);
-    private static final Color RED1 = new Color(255,0,0);
-    private static final Color RED = new Color(167,0,0);
+    	private static final Color RED3 = new Color(255,123,123);
+    	private static final Color RED2 = new Color(255,82,82);
+    	private static final Color RED1 = new Color(255,0,0);
+    	private static final Color RED = new Color(167,0,0);
 	// The green palette
 	private static final Color GREEN = new Color(0,255,0);
 	private static final Color GREEN1 = new Color(25,255,25);
 	private static final Color GREEN2 = new Color(76,255,76);
 	private static final Color GREEN3 = new Color(127,255,127);
 	private static final Color GREEN4 = new Color(178,255,178);
-   // The yellow palette
+   	// The yellow palette
 	private static final Color YELLOW = new Color(255,255,20);
 	private static final Color YELLOW1 = new Color(255,255,70);
-    private static final Color YELLOW2 = new Color(255,255,90);
-    private static final Color YELLOW3 = new Color(255,255,127);
-    private static final Color YELLOW4 = new Color(255,255,178);
+    	private static final Color YELLOW2 = new Color(255,255,90);
+    	private static final Color YELLOW3 = new Color(255,255,127);
+   	private static final Color YELLOW4 = new Color(255,255,178);
     
-    private static final Color LAVENDER = new Color(216,191,216);
+    	private static final Color LAVENDER = new Color(216,191,216);
 
-    static JButton bubble;
-    static JButton merge;
+    	static JButton bubble;
+    	static JButton merge;
 	static JButton shuffle;
 	static JButton insertion;
 	static JButton quick;
