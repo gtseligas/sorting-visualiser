@@ -49,15 +49,15 @@ public class SortingPanel extends JPanel {
     private static final Color RED2 = new Color(255,82,82);
     private static final Color RED1 = new Color(255,0,0);
     private static final Color RED = new Color(167,0,0);
-    // The green palette
-    private static final Color GREEN = new Color(0,255,0);
-    private static final Color GREEN1 = new Color(25,255,25);
-    private static final Color GREEN2 = new Color(76,255,76);
-    private static final Color GREEN3 = new Color(127,255,127);
-    private static final Color GREEN4 = new Color(178,255,178);
-    // The yellow palette
-    private static final Color YELLOW = new Color(255,255,20);
-    private static final Color YELLOW1 = new Color(255,255,70);
+	// The green palette
+	private static final Color GREEN = new Color(0,255,0);
+	private static final Color GREEN1 = new Color(25,255,25);
+	private static final Color GREEN2 = new Color(76,255,76);
+	private static final Color GREEN3 = new Color(127,255,127);
+	private static final Color GREEN4 = new Color(178,255,178);
+   // The yellow palette
+	private static final Color YELLOW = new Color(255,255,20);
+	private static final Color YELLOW1 = new Color(255,255,70);
     private static final Color YELLOW2 = new Color(255,255,90);
     private static final Color YELLOW3 = new Color(255,255,127);
     private static final Color YELLOW4 = new Color(255,255,178);
@@ -84,7 +84,7 @@ public class SortingPanel extends JPanel {
 	public static MidiChannel[] midiChannel;
 	public static Instrument[] inst;
 	
-	// Constructor for sorting panel. Initialises nums array, creates a button "Start" that executes the BubbleWorker.
+	// Constructor for sorting panel. Initialises nums array, creates buttons.
 	SortingPanel(int[] n) {
 		nums = new int[n.length];
 		for (int i = 0; i < n.length; i++)
@@ -214,25 +214,25 @@ public class SortingPanel extends JPanel {
 		add(shell);	
 		
 		// Add heap sort button
-				heap = createSimpleButton("Heap");
-				heap.setBounds(Configurations.PANEL_WIDTH - Configurations.START_BTN_HOFFSET - 508, Configurations.START_BTN_VOFFSET , Configurations.BUTTON_WIDTH, Configurations.BUTTON_HEIGHT);
-				heap.addActionListener(ae -> {
-					JPanel panel = (JPanel) ((JButton)ae.getSource()).getParent();
+		heap = createSimpleButton("Heap");
+		heap.setBounds(Configurations.PANEL_WIDTH - Configurations.START_BTN_HOFFSET - 508, Configurations.START_BTN_VOFFSET , Configurations.BUTTON_WIDTH, Configurations.BUTTON_HEIGHT);
+		heap.addActionListener(ae -> {
+				JPanel panel = (JPanel) ((JButton)ae.getSource()).getParent();
 							
-					// Initalize the lavender indice
-					aboveThisLav = Configurations.ARRAY_SIZE;
-					belowThisLav = -1;
+				// Initalize the lavender indice
+				aboveThisLav = Configurations.ARRAY_SIZE;
+				belowThisLav = -1;
 							
-					PanelWrapper wrapper = new PanelWrapper(panel);
+				PanelWrapper wrapper = new PanelWrapper(panel);
 							
-					HeapWorker worker = new HeapWorker(nums, wrapper);
-					sorting = true;
-					updateSortButtons();
-					updateArrayButtons();
-					skip.setVisible(true);
-					worker.execute(); 
-				});
-				add(heap);	
+				HeapWorker worker = new HeapWorker(nums, wrapper);
+				sorting = true;
+				updateSortButtons();
+				updateArrayButtons();
+				skip.setVisible(true);
+				worker.execute(); 
+		});
+		add(heap);	
 		
 		// Add shuffle button
 		shuffle = createSimpleButton("Shuffle");
@@ -433,7 +433,7 @@ public class SortingPanel extends JPanel {
 		  return button;
 		}
 	
-	// Function to update visibility of buttons
+	// Function to update visibility of sort buttons
 	public static void updateSortButtons() {
 		// If they are visible turn them off
 		if (bubble.isVisible()) {
@@ -457,7 +457,7 @@ public class SortingPanel extends JPanel {
 		}
 	}
 	
-	// Function to update visibility of buttons
+	// Function to update visibility of array generation buttons
 		public static void updateArrayButtons() {
 			// If they are visible turn them off
 			if (sorted.isVisible()) {
