@@ -17,3 +17,4 @@ Generates a random array using a variation of the Fisher - Yates shuffle, in whi
 ### Quicksort
 ### Heapsort
 ### Shell sort 
+The gap sequence used for Shell sort is a_(n+1) = 3*a_n + 1
